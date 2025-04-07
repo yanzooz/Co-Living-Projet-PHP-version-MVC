@@ -1,0 +1,19 @@
+{
+    "name": "yanni/projet4mvc",
+    "description": "Projet Business Case en MVC",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yanzooz",
+            "email": "yannickognana@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/var-dumper": "^7.2"
+    }
+}

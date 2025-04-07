@@ -1,0 +1,306 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --secondary-color: #64748b;
+  --secondary-hover: #475569;
+  --success-color: #22c55e;
+  --success-hover: #16a34a;
+  --danger-color: #ef4444;
+  --danger-hover: #b91c1c;
+  --info-color: #0ea5e9;
+  --info-hover: #0284c7;
+  --background-color: #f1f5f9;
+  --text-color: #1e293b;
+  --border-radius: 1rem;
+  --transition-speed: 0.25s;
+  --glass-blur: blur(10px);
+}
+
+/* Base */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+/* Buttons */
+
+.btn-danger {
+  background: var(--danger-color);
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+.btn-success {
+  background: var(--success-color);
+}
+
+.btn-success:hover {
+  background: var(--success-hover);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-hover);
+}
+
+.btn-info {
+  background: var(--info-color);
+}
+
+.btn-info:hover {
+  background: var(--info-hover);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Uniformiser la taille des images */
+.carousel-inner img {
+  width: 100%; /* L'image occupe toute la largeur de son conteneur */
+  height: 200px; /* Hauteur fixe pour toutes les images */
+  object-fit: cover; /* Ajuste l'image pour remplir le conteneur sans déformation */
+  border-radius: var(--border-radius); /* Applique les bordures arrondies si nécessaire */
+}
+
+
+/* Bouton Ajouter en favoris */
+.favoris-btn {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: black;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.favoris-btn:hover {
+  transform: scale(1.5);
+  background-color: rgba(255, 255, 255, 0.555);
+}
+
+.position-relative:hover .favoris-btn  {
+  transform: scale(1.25);
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 1; /* Visible au survol */
+}
+
+/* Boutons de navigation du carrousel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 2rem; /* Réduit la largeur pour ne prendre que la place de l'icône */
+    height: 2rem; /* Ajuste la hauteur pour correspondre à l'icône */
+    background-color: rgba(0, 0, 0, 0); /* Ajoute un fond semi-transparent */
+    border-radius: 50%; /* Rend les boutons circulaires */
+    padding: 0.5rem; /* Ajoute un espace autour de l'icône */
+    margin: 0.5rem; /* Ajoute un espace autour de l'icône */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    justify-content: center;
+
+    /* Positionnement au milieu de l'image */
+    top: 50%; /* Place le bouton au milieu verticalement */
+    transform: translateY(-50%); /* Centre le bouton par rapport à son propre axe */
+}
+
+/* Effet au survol */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Change la couleur au survol */
+    transform: translateY(-50%) scale(1.1); /* Légère mise en avant au survol */
+}
+
+/* Icônes des boutons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1.5rem; /* Ajuste la taille de l'icône */
+    height: 1.5rem;
+}
+
+/* Texte descriptif */
+.text-muted {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+/* Note en étoiles */
+.text-warning {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.text-warning i {
+  margin-right: 0.2rem;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+table th,
+table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+table tr:hover {
+  background-color: #e2e8f0;
+  transition: background-color var(--transition-speed);
+}
+
+/* Form */
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  transition: border-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+  outline: none;
+}
+
+form input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Alerts */
+.alert {
+  padding: 1.25rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.alert-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.alert-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.alert-dismissible .btn-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+tr td img{
+  transition: transform 0.5s ease;
+}
+
+
+tr td img:hover{
+  transition: transform 0.5s ease;
+  transform: scale(1.03);
+  filter: brightness(0.9);
+  scale: 1.05;
+}
+
+
